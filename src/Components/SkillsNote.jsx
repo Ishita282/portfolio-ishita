@@ -123,6 +123,7 @@ const SkillsNote = ({ onClose }) => {
               <span className="px-3 py-1 bg-blue-100 rounded-full text-sm">
                 Netlify
               </span>
+
             </div>
           </div>
         </div>

@@ -2,9 +2,9 @@ import React from "react";
 
 const ContactPanel = ({ onClose }) => {
   return (
-    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
 
-      <div className="w-[90%] max-w-[400px] bg-white rounded-2xl shadow-2xl p-6 relative text-center">
+      <div className="w-[400px] bg-white rounded-2xl shadow-2xl p-6 relative text-center">
 
         {/* Close */}
         <button 

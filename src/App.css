@@ -1,1 +1,64 @@
 @import "tailwindcss";
+
+/* =========================
+   GLOBAL RESPONSIVENESS FIX
+   ========================= */
+
+/* MOBILE (default safety layer) */
+@media (max-width: 768px) {
+
+  /* prevent horizontal scroll issues */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Make all large modals responsive */
+  .modal-box,
+  [class*="w-[800px]"],
+  [class*="w-[850px]"],
+  [class*="w-[700px]"],
+  [class*="w-[520px]"],
+  [class*="w-[400px]"] {
+    width: 95% !important;
+    max-width: 95% !important;
+  }
+
+  /* Fix tall modals */
+  .modal-box,
+  [class*="h-[500px]"],
+  [class*="h-[540px]"] {
+    height: 85vh !important;
+  }
+
+  /* Make grids stack vertically */
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Reduce huge text scaling issues */
+  h1 {
+    font-size: 1.8rem !important;
+  }
+
+  h2 {
+    font-size: 1.4rem !important;
+  }
+
+  /* Images should never overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* TABLET FIX */
+@media (max-width: 1024px) {
+
+  [class*="w-[850px]"] {
+    width: 90% !important;
+  }
+
+  [class*="w-[800px]"] {
+    width: 90% !important;
+  }
+}

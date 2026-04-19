@@ -1,16 +1,73 @@
-# React + Vite
+# Interactive Portfolio Workspace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a personal portfolio project built using React, Tailwind CSS, and Framer Motion. It is designed like a virtual workspace where different objects open different sections of the portfolio.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- Interactive workspace-based UI
+- Clickable elements like laptop, boxes, phone, sticky notes, terminal, and trophy
+- Each element opens a modal with content
+- Dark mode toggle
+- Smooth animations using Framer Motion
+- Fully responsive design for mobile and desktop
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Sections
+```bash
+Laptop → About Me
+Boxes → Projects
+Sticky Notes → Skills
+Terminal → Command-based interface
+Phone → Contact
+Trophy → Experience
+Lamp → Dark/Light mode toggle
+Guide → Workspace instructions
+```
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+    >> React.js
+    >> Tailwind CSS
+    >> Framer Motion
+
+---
+
+## How It Works
+
+- Clicking on any object in the workspace opens a corresponding panel using React state. Modals are animated using Framer Motion for smooth transitions.
+
+---
+
+## Installation
+
+```bash
+Clone the repository
+Run npm install
+Run npm run dev
+```
+
+---
+
+## Live demo
+
+```bash
+https://portfolio-ishita-mu.vercel.app/
+```
+
+---
+
+## Future Improvements
+1. Drag and drop desktop icons
+2. More interactive animations
+3. Sound effects
+4. Better terminal commands
+
+---
+
+## Author
+
+- Ishita Sharma
+- Full Stack Developer (React, Node.js, AI Enthusiast)

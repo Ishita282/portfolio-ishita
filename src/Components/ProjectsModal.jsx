@@ -32,9 +32,8 @@ const projects = [
 
 const ProjectsModal = ({ onClose }) => {
   return (
-    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-      
-      <div className="w-[95%] max-w-5xl max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl p-4 md:p-6 relative">
+    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
+      <div className="w-[800px] bg-white rounded-2xl shadow-2xl p-6 relative">
 
         {/* Close Button */}
         <button
@@ -44,28 +43,22 @@ const ProjectsModal = ({ onClose }) => {
           ✖
         </button>
 
-        <h2 className="text-xl md:text-2xl font-bold mb-4">
-          My Projects
-        </h2>
+        <h2 className="text-2xl font-bold mb-4">My Projects</h2>
 
         {/* Project Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-
+        <div className="grid md:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div
               key={index}
               className="p-4 rounded-xl bg-gradient-to-br from-white to-gray-50 border hover:shadow-xl hover:-translate-y-1 transition duration-300"
             >
-
               {/* Image / Emoji */}
-              <div className="h-28 md:h-32 bg-gray-200 rounded-lg mb-3 flex items-center justify-center text-3xl">
+              <div className="h-32 bg-gray-200 rounded-lg mb-3 flex items-center justify-center text-3xl">
                 {project.emoji}
               </div>
 
               {/* Title */}
-              <h3 className="font-semibold text-base md:text-lg">
-                {project.title}
-              </h3>
+              <h3 className="font-semibold text-lg">{project.title}</h3>
 
               {/* Description */}
               <p className="text-sm text-gray-600 mt-1">
@@ -86,7 +79,6 @@ const ProjectsModal = ({ onClose }) => {
 
               {/* Buttons */}
               <div className="flex gap-2 mt-4">
-
                 <a
                   href={project.demo}
                   target="_blank"
@@ -104,14 +96,10 @@ const ProjectsModal = ({ onClose }) => {
                 >
                   Code
                 </a>
-
               </div>
-
             </div>
           ))}
-
         </div>
-
       </div>
     </div>
   );

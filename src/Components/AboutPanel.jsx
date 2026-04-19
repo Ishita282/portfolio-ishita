@@ -5,14 +5,12 @@ import myImage from "../assets/profile-pic.jpeg";
 const AboutPanel = ({ onClose }) => {
   return (
     <div className="w-full h-full fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm z-50">
-      
       <Motion.div
         initial={{ opacity: 0, scale: 0.85, y: 30 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.85, y: 30 }}
         transition={{ type: "spring", stiffness: 120 }}
-        
-        className="relative w-[95%] md:w-[800px] max-w-[95%] md:max-w-[90%] h-[85vh] md:h-[500px] bg-white/90 rounded-2xl shadow-2xl overflow-hidden"
+        className="relative w-[800px] max-w-[90%] h-[500px] bg-white/90 rounded-2xl shadow-2xl overflow-hidden"
       >
         {/* Top Bar */}
         <div className="flex justify-between items-center px-5 py-3 border-b bg-white/60">
@@ -28,22 +26,17 @@ const AboutPanel = ({ onClose }) => {
 
         {/* Content */}
         <div className="p-6 flex flex-col md:flex-row gap-6 h-full">
-          
           {/* Left - Image */}
           <div className="flex-shrink-0 flex flex-col items-center justify-start">
             <img
               src={myImage}
               alt="profile"
-              className="w-28 h-28 md:w-40 md:h-40 object-cover object-top rounded-full border-4 border-white shadow-[0_0_25px_rgba(0,0,0,0.2)]"
+              className="w-40 h-40 object-cover object-top rounded-full border-4 border-white shadow-[0_0_25px_rgba(0,0,0,0.2)]"
             />
 
-            <h3 className="mt-4 text-xl font-semibold text-center">
-              Ishita Sharma
-            </h3>
+            <h3 className="mt-4 text-xl font-semibold">Ishita Sharma</h3>
 
-            <p className="text-sm text-gray-500 text-center">
-              Full Stack Developer
-            </p>
+            <p className="text-sm text-gray-500">Full Stack Developer</p>
           </div>
 
           {/* Right - Text */}
@@ -64,7 +57,7 @@ const AboutPanel = ({ onClose }) => {
 
             <br />
 
-            <div className="mt-3 flex flex-wrap gap-4 text-sm text-gray-600">
+            <div className="mt-3 flex gap-4 text-sm text-gray-600">
               <p>📍 India</p>
               <p>💻 10+ Projects</p>
               <p>🚀 Full Stack Dev</p>
