@@ -41,7 +41,7 @@ const Terminal = ({ onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black text-green-400 p-6 z-50 font-mono">
+    <div className="fixed inset-0 bg-black text-green-400 p-4 md:p-6 z-50 font-mono flex flex-col">
 
       {/* Close */}
       <button 
@@ -52,17 +52,20 @@ const Terminal = ({ onClose }) => {
       </button>
 
       {/* Terminal Output */}
-      <div className="mb-4">
+      <div className="mb-4 flex-1 overflow-y-auto pr-2 text-sm md:text-base">
         {history.map((line, index) => (
-          <p key={index}>{line}</p>
+          <p key={index} className="break-words">
+            {line}
+          </p>
         ))}
       </div>
 
       {/* Input */}
-      <div className="flex">
-        <span>&gt; </span>
+      <div className="flex items-center">
+        <span className="text-sm md:text-base">&gt;</span>
+
         <input
-          className="bg-transparent outline-none ml-2 flex-1"
+          className="bg-transparent outline-none ml-2 flex-1 text-sm md:text-base"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleKeyDown}
