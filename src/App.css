@@ -4,27 +4,25 @@
    GLOBAL RESPONSIVENESS FIX
    ========================= */
 
-/* MOBILE (default safety layer) */
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
   }
 
-  /* Shared modal responsiveness */
   .modal-responsive {
     width: 95% !important;
     max-width: 95% !important;
     max-height: calc(100dvh - 2rem);
     overflow-y: auto;
     padding: 1rem;
+    margin: 0 auto; /* keep centered */
   }
 
-  /* Grid layouts stack vertically */
   .modal-grid {
     grid-template-columns: 1fr !important;
+    gap: 1rem; /* tighter spacing */
   }
 
-  /* Smooth font scaling */
   h1 {
     font-size: clamp(1.4rem, 4vw, 2rem);
   }
@@ -33,14 +31,17 @@
     font-size: clamp(1.2rem, 3vw, 1.6rem);
   }
 
-  /* Prevent image overflow */
   img {
     max-width: 100%;
     height: auto;
   }
+
+  /* Workspace items spacing */
+  .workspace-item {
+    margin: clamp(0.5rem, 2vw, 1.2rem);
+  }
 }
 
-/* TABLET FIX */
 @media (max-width: 1024px) {
   .modal-responsive {
     width: 90% !important;
