@@ -6,45 +6,34 @@
 
 /* MOBILE (default safety layer) */
 @media (max-width: 768px) {
-
-  /* prevent horizontal scroll issues */
   body {
     overflow-x: hidden;
   }
 
-  /* Make all large modals responsive */
-  .modal-box,
-  [class*="w-[800px]"],
-  [class*="w-[850px]"],
-  [class*="w-[700px]"],
-  [class*="w-[520px]"],
-  [class*="w-[400px]"] {
+  /* Shared modal responsiveness */
+  .modal-responsive {
     width: 95% !important;
     max-width: 95% !important;
+    max-height: calc(100dvh - 2rem);
+    overflow-y: auto;
+    padding: 1rem;
   }
 
-  /* Fix tall modals */
-  .modal-box,
-  [class*="h-[500px]"],
-  [class*="h-[540px]"] {
-    height: 85vh !important;
-  }
-
-  /* Make grids stack vertically */
-  .grid {
+  /* Grid layouts stack vertically */
+  .modal-grid {
     grid-template-columns: 1fr !important;
   }
 
-  /* Reduce huge text scaling issues */
+  /* Smooth font scaling */
   h1 {
-    font-size: 1.8rem !important;
+    font-size: clamp(1.4rem, 4vw, 2rem);
   }
 
   h2 {
-    font-size: 1.4rem !important;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
   }
 
-  /* Images should never overflow */
+  /* Prevent image overflow */
   img {
     max-width: 100%;
     height: auto;
@@ -53,12 +42,8 @@
 
 /* TABLET FIX */
 @media (max-width: 1024px) {
-
-  [class*="w-[850px]"] {
+  .modal-responsive {
     width: 90% !important;
-  }
-
-  [class*="w-[800px]"] {
-    width: 90% !important;
+    max-width: 90% !important;
   }
 }
