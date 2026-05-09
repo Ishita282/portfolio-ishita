@@ -1,6 +1,10 @@
 import React from "react";
+import useEscKey from "../../Hooks/useEscKey";
+
 
 const SkillsNote = ({ onClose }) => {
+  useEscKey(onClose);
+  
   return (
     <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4">
       <div className="w-[95%] max-w-[700px] max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl p-4 md:p-6 relative">

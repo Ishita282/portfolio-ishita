@@ -1,6 +1,10 @@
 import React from "react";
+import useEscKey from "../../Hooks/useEscKey";
+
 
 const ContactPanel = ({ onClose }) => {
+  useEscKey(onClose);
+
   return (
     <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
 

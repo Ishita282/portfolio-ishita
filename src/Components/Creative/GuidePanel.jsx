@@ -1,7 +1,11 @@
 import React from "react";
 import { motion as Motion } from "framer-motion";
+import useEscKey from "../../Hooks/useEscKey";
+
 
 const GuidePanel = ({ onClose }) => {
+  useEscKey(onClose);
+
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm z-50">
       <Motion.div
@@ -60,6 +64,10 @@ const GuidePanel = ({ onClose }) => {
 
           <div className="flex items-center gap-2">
             <span>⭐</span> <p>Trophy → Experiences</p>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span>🔙</span> <p>Escape / X → Close Panels</p>
           </div>
         </div>
       </Motion.div>

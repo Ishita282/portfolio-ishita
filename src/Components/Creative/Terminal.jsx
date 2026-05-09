@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import useEscKey from "../../Hooks/useEscKey";
+
 
 const Terminal = ({ onClose }) => {
+  useEscKey(onClose);
+  
   const [input, setInput] = useState("");
   const [history, setHistory] = useState([
     "Welcome to Ishita OS",

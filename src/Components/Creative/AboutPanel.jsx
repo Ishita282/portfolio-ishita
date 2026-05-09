@@ -1,8 +1,11 @@
 import React from "react";
 import { motion as Motion } from "framer-motion";
-import myImage from "../assets/profile-pic.jpeg";
+import myImage from "../../assets/profile-pic.jpeg";
+import useEscKey from "../../Hooks/useEscKey";
 
 const AboutPanel = ({ onClose }) => {
+  useEscKey(onClose);
+
   return (
     <div className="w-full h-full fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm z-50">
       <Motion.div

@@ -1,4 +1,6 @@
 import React from "react";
+import useEscKey from "../../Hooks/useEscKey";
+
 
 const projects = [
   {
@@ -31,6 +33,8 @@ const projects = [
 ];
 
 const ProjectsModal = ({ onClose }) => {
+  useEscKey(onClose);
+  
   return (
     <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
       <div className="w-[800px] bg-white rounded-2xl shadow-2xl p-6 relative">

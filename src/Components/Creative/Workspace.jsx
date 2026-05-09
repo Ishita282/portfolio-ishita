@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import laptop from "../assets/laptop.png";
-import StickyNotes from "../assets/sticky-notes.png";
-import ImgTerminal from "../assets/terminal.png";
-import Phone from "../assets/phone.png";
-import Boxes from "../assets/boxes.png";
-import Lamp from "../assets/lamp.png";
-import Background from "../assets/background.jpg";
-import Trophy from "../assets/experience.png";
+import laptop from "../../assets/laptop.png";
+import StickyNotes from "../../assets/sticky-notes.png";
+import ImgTerminal from "../../assets/terminal.png";
+import Phone from "../../assets/phone.png";
+import Boxes from "../../assets/boxes.png";
+import Lamp from "../../assets/lamp.png";
+import Background from "../../assets/background.jpg";
+import Trophy from "../../assets/experience.png";
 
 import ProjectsModal from "./ProjectsModal";
 import Guide from "./GuidePanel";
